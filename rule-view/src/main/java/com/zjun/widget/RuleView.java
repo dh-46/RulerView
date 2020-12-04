@@ -232,6 +232,10 @@ public class RuleView extends View {
         ta.recycle();
     }
 
+    public void setBgColor(int bgColor) {
+        this.bgColor = bgColor;
+    }
+
     /**
      * 初始化
      */

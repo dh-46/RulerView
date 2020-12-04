@@ -1,5 +1,6 @@
 package com.zjun.demo.ruleview;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.design.widget.Snackbar;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         msrvMoney = findViewById(R.id.msrv_money);
         tvValue = findViewById(R.id.tv_value);
         gvRule = findViewById(R.id.gv_1);
+        gvRule.setValue(0, 500, 0, 1, 10);
 
 
         tvValue.setText(Float.toString(gvRule.getCurrentValue()));
@@ -49,6 +51,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onValueChanged(float value) {
                 tvValue.setText(Float.toString(value));
+                if (value > 0 && value <= 50) {
+                    gvRule.setBgColor(Color.parseColor("#00966E"));
+                } else if (value > 50 && value <= 100) {
+                    gvRule.setBgColor(Color.parseColor("#FFE08D"));
+                } else if (value > 100 && value <= 150) {
+                    gvRule.setBgColor(Color.parseColor("#FDA577"));
+                } else if (value > 150 && value <= 200) {
+                    gvRule.setBgColor(Color.parseColor("#F16966"));
+                } else if (value > 200 && value <= 300) {
+                    gvRule.setBgColor(Color.parseColor("#C463EF"));
+                } else if (value > 300 && value <= 500) {
+                    gvRule.setBgColor(Color.parseColor("#A0596D"));
+                }
             }
         });
 
@@ -113,7 +128,8 @@ public class MainActivity extends AppCompatActivity {
                 msrvMoney.setBalance(moneyBalance);
                 isMoneySloped = false;
                 break;
-            default: break;
+            default:
+                break;
         }
     }
 
