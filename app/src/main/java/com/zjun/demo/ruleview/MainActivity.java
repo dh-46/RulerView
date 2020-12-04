@@ -10,9 +10,9 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.zjun.widget.MoneySelectRuleView;
-import com.zjun.widget.RuleView;
-import com.zjun.widget.TimeRuleView;
+import com.zjun.widget.MoneySelectRulerView;
+import com.zjun.widget.RulerView;
+import com.zjun.widget.TimeRulerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,11 +21,11 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     private TextView tvValue;
-    private RuleView gvRule;
-    private MoneySelectRuleView msrvMoney;
+    private RulerView gvRule;
+    private MoneySelectRulerView msrvMoney;
     private TextView tvMoney;
     private EditText etMoney;
-    private TimeRuleView trvTime;
+    private TimeRulerView trvTime;
     private TextView tvTime;
 
     private float moneyBalance;
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         tvValue.setText(Float.toString(gvRule.getCurrentValue()));
-        gvRule.setOnValueChangedListener(new RuleView.OnValueChangedListener() {
+        gvRule.setOnValueChangedListener(new RulerView.OnValueChangedListener() {
             @Override
             public void onValueChanged(float value) {
                 tvValue.setText(Float.toString(value));
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
         tvMoney.setText(Integer.toString(msrvMoney.getValue()));
         moneyBalance = msrvMoney.getBalance();
-        msrvMoney.setOnValueChangedListener(new MoneySelectRuleView.OnValueChangedListener() {
+        msrvMoney.setOnValueChangedListener(new MoneySelectRulerView.OnValueChangedListener() {
             @Override
             public void onValueChanged(int newValue) {
                 tvMoney.setText(Integer.toString(newValue));
@@ -86,16 +86,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        trvTime.setOnTimeChangedListener(new TimeRuleView.OnTimeChangedListener() {
+        trvTime.setOnTimeChangedListener(new TimeRulerView.OnTimeChangedListener() {
             @Override
             public void onTimeChanged(int newTimeValue) {
-                tvTime.setText(TimeRuleView.formatTimeHHmmss(newTimeValue));
+                tvTime.setText(TimeRulerView.formatTimeHHmmss(newTimeValue));
             }
         });
         // 模拟时间段数据
-        List<TimeRuleView.TimePart> list = new ArrayList<>();
+        List<TimeRulerView.TimePart> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            TimeRuleView.TimePart part = new TimeRuleView.TimePart();
+            TimeRulerView.TimePart part = new TimeRulerView.TimePart();
             part.startTime = i * 1000;
             part.endTime = part.startTime + new Random().nextInt(1000);
             list.add(part);

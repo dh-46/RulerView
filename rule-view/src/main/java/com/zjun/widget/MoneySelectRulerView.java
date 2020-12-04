@@ -23,13 +23,13 @@ import android.widget.Scroller;
  *
  * 每隔固定100
  *
- * 参考：{@link RuleView}
+ * 参考：{@link RulerView}
  *
  * Author: Ralap
  * Description:
  * Date 2018/8/9
  */
-public class MoneySelectRuleView extends View {
+public class MoneySelectRulerView extends View {
 
     private static final boolean LOG_ENABLE = BuildConfig.DEBUG;
 
@@ -88,15 +88,15 @@ public class MoneySelectRuleView extends View {
 
     }
 
-    public MoneySelectRuleView(Context context) {
+    public MoneySelectRulerView(Context context) {
         this(context, null);
     }
 
-    public MoneySelectRuleView(Context context, @Nullable AttributeSet attrs) {
+    public MoneySelectRulerView(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public MoneySelectRuleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public MoneySelectRulerView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initAttrs(context, attrs);
 

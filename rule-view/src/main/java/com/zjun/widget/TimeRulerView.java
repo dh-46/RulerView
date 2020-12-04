@@ -36,7 +36,7 @@ import java.util.List;
  *  - 支持滑动与缩放的连续切换
  *
  * 思路：
- *  - 时间绘制思路参考{@link RuleView}
+ *  - 时间绘制思路参考{@link RulerView}
  *  - 时间缩放，采用缩放手势检测器 ScaleGestureDetector
  *  - 缩放的等级估算方式：进入默认比例为1，根据每隔所占的秒数与宽度，可估算出每个等级的宽度范围，再与默认等级对应的宽度相除，即可算出缩放比例
  *  - 惯性滑动，使用速度追踪器 VelocityTracker
@@ -49,7 +49,7 @@ import java.util.List;
  * Description:
  * Date 2018/8/11
  */
-public class TimeRuleView extends View {
+public class TimeRulerView extends View {
 
     private static final boolean LOG_ENABLE = BuildConfig.DEBUG;
     public static final int MAX_TIME_VALUE = 24 * 3600;
@@ -217,15 +217,15 @@ public class TimeRuleView extends View {
         public int endTime;
     }
 
-    public TimeRuleView(Context context) {
+    public TimeRulerView(Context context) {
         this(context, null);
     }
 
-    public TimeRuleView(Context context, @Nullable AttributeSet attrs) {
+    public TimeRulerView(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public TimeRuleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public TimeRulerView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initAttrs(context, attrs);
 

@@ -35,7 +35,7 @@ import android.widget.Scroller;
  * Description:
  * Date 2018/7/29
  */
-public class RuleView extends View {
+public class RulerView extends View {
     private static final boolean LOG_ENABLE = BuildConfig.DEBUG;
 
     /**
@@ -187,15 +187,15 @@ public class RuleView extends View {
     }
 
 
-    public RuleView(Context context) {
+    public RulerView(Context context) {
         this(context, null);
     }
 
-    public RuleView(Context context, @Nullable AttributeSet attrs) {
+    public RulerView(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public RuleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public RulerView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initAttrs(context, attrs);
 

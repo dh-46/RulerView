@@ -44,7 +44,7 @@
             android:textSize="14sp" />
     </RelativeLayout>
 
-    <com.zjun.widget.RuleView
+    <com.zjun.widget.RulerView
         android:id="@+id/gv_1"
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -110,7 +110,7 @@
     </RelativeLayout>
 
 
-    <com.zjun.widget.MoneySelectRuleView
+    <com.zjun.widget.MoneySelectRulerView
         android:id="@+id/msrv_money"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -183,7 +183,7 @@
             android:textColor="#666" />
     </RelativeLayout>
 
-    <com.zjun.widget.TimeRuleView
+    <com.zjun.widget.TimeRulerView
         android:id="@+id/trv_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
